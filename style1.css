@@ -1,0 +1,760 @@
+@font-face {
+    font-family: "police1";
+    src: url("fonts/AdventuresontheMountains.ttf");
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+}
+
+body {
+margin: 0;
+padding: 0;
+background-color: white;
+}
+
+/*************************************************
+          section               nav bar
+***************************************************/
+
+main {
+border-right: 80px solid white;
+border-left:  80px solid white;
+}
+
+.accueil {
+  width: 100%;
+  height: 60em;
+  text-align: center;
+  background-image: url("image/image2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ nav{
+   margin: 20px auto;
+   width: 90%;
+   max-width: 1000px;
+
+ }
+
+nav > ul{
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+}
+nav ul{
+list-style: none;
+
+}
+nav > ul li {
+  display: table-cell;
+  color: white;
+}
+
+/***************************************************
+            Sous-menu nav
+*****************************************************/
+nav > ul > li > ul{
+  display: none;
+}
+
+
+nav > ul > li > ul {
+  display: block;
+  position: absolute;
+  background: #000;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  height: 0%;
+  -webkit-transition: all .3s ease;
+  moz-transition: all .3s ease;
+  ms-transition: all .3s ease;
+  o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+li{
+  text-align: center;
+
+}
+nav > ul > li:hover > ul {
+  display: block;
+  height: 100%;
+}
+
+
+nav > ul li a {
+  color:  white;
+  display: block;
+  line-height: 20px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .3s ease;
+  moz-transition: all .3s ease;
+  ms-transition: all .3s ease;
+  o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+nav > ul > li > ul > li a:hover {
+  background: #5da5a2;
+
+}
+
+nav > ul > li > a span {
+  background: #c44e45;
+  display: block;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  position: absolute;
+  top: -70px;
+  -webkit-transition: all .3s ease;
+  moz-transition: all .3s ease;
+  ms-transition: all .3s ease;
+  o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+nav > ul > li > a span .icon {
+  display: block;
+  line-height: 60px;
+  justify-content: center;
+  align-items: center;
+  line-height: 60px;
+}
+
+
+
+nav > ul > li > a:hover > span {
+  top: 0;
+
+}
+
+.ctrs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/***************************************************
+               couleurs nav
+***************************************************/
+
+
+nav ul li a .premiere {
+  background-color: #C51213;
+
+}
+
+nav ul li a .seconde {
+  background-color: #5da5a2;
+
+}
+
+nav ul li a .troisieme {
+  background-color: #f8a51e;
+
+}
+
+nav ul li a .quatrieme {
+  background-color: #174459;
+
+}
+
+nav ul li a .cinqueime {
+  background-color: #c44e45;
+
+}
+
+nav ul li a .sixieme {
+  background-color: #78A12C;
+
+}
+
+nav ul li a .septieme {
+  background-color: #C51213;
+
+}
+
+
+
+
+/**************************************************
+           portrait coordonnées
+**************************************************/
+
+.sup{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.conteneur{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  width: 900px;
+  height: 500px;
+  background-color: rgba(0 , 0 , 0, 0.7);
+  color: white;
+  border-radius: 30px;
+}
+
+.presentation{
+  width:  300px;
+  height: 300px;
+  border-radius: 30px;
+  border: 5px solid white;
+  font-size: 23px;
+  padding-top: 30px;
+}
+.portrait{
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  background-image: url("image/moi.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 5px solid white;
+}
+
+
+
+
+
+
+/***************************************************
+           nav vertical reseau sociaux
+*****************************************************/
+
+.social{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   position: fixed;
+   background-color: rgba(0 , 0 , 0, 0.7);
+   left: 0;
+   top: 220px;
+   z-index: 2000;
+}
+
+.social ul {
+ list-style:none;
+}
+
+.social li:nth-child(1){
+  background-color: blue;
+}
+.social li:nth-child(2){
+  background-color: blue;
+}
+.social li:nth-child(3){
+  background-color: blue;
+}
+.social li:nth-child(4){
+  background-color: blue;
+}
+.social li:nth-child(5){
+  background-color: blue;
+}
+
+.social ul li a {
+  display: inline-block;
+  color: #fff;
+
+  padding: 10px 15px;
+  text-decoration: none;
+  -webkit-transition:all 500ms ease;
+  -o-transition:all 500ms ease;
+  transition:all 500ms ease;
+}
+
+.social ul li a i{
+  background-color: red:
+}
+/*************************************************
+            EXPERIENCES
+***************************************************/
+.titre{
+width: 200px;
+height: 100px;
+color: black;
+text-align: center;
+border: 1px solid grey;
+margin-top: 150px;
+padding-top: 35px;
+margin-left: 400em;
+font-family: police1;
+font-size: 15px;
+margin-bottom: 150px;
+
+}
+
+
+.experiences{
+  width: 100%;
+  height: 300em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  background-color: #EEFBFC;
+
+
+}
+
+.conteneurcentre{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2%;
+  width: 70%;
+  height: auto;
+  background: url("image/pont.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.pro{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 30px auto;
+}
+.pro2{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 30px auto;
+}
+/******************************************
+          carte pro
+*******************************************/
+.panel{
+  width: 46%;
+  height: auto;
+  font-family: "police1";
+  font-size: 50px;
+  padding: 30px;
+}
+.informatique{
+  text-align: center;
+  border: 1px solid grey;
+  background-color: white;
+}
+
+.informatique1{
+  padding-top: 100px;
+
+  border: 2px solid grey;
+}
+
+.secretariat{
+
+  border: 1px solid grey;
+  background-color: white;
+}
+
+.secretariat1{
+  text-align: center;
+
+  border: 2px solid grey;
+}
+.baby{
+
+  border: 1px solid grey;
+  background-color: white;
+}
+
+.baby1  {
+  text-align: center;
+
+  border: 2px solid grey;
+
+}
+
+.livre{
+
+  border: 1px solid grey;
+  background-color: white;
+
+}
+
+.livre1{
+  text-align: center;
+
+  border: 2px solid grey;
+}
+
+.vente{
+  justify-content: flex-start;
+  align-self: flex-start;
+  border: 1px solid grey;
+  background-color: white;
+
+}
+
+.vente1{
+  text-align: center;
+
+  border: 2px solid grey;
+}
+
+
+/********************************************************************
+                          HOVER
+***********************************************************************/
+.informatique :hover{
+   background-color: #000;
+   color: white;
+
+}
+
+
+.vente :hover{
+   background-color: #000;
+   color: white;
+
+}
+
+.secretariat :hover{
+   background-color: #000;
+   color: white;
+
+}
+
+
+.baby :hover{
+   background-color:  #000;
+   color: white;
+
+}
+
+
+
+
+/***************************************************
+             FORMATION
+****************************************************/
+
+.formation{
+  width: 100%;
+  height: 120em;
+  background-color: #EEFBFC;
+
+}
+
+
+
+.titre{
+  width: 400px;
+  height: 100px;
+  margin-bottom: 50px;
+  color: black;
+  text-align: center;
+  border: 1px solid grey;
+  text-align: center;
+  padding-top: 30px;
+  margin-left: 400px;
+ font-family: police1;
+ font-size: 20px;
+}
+
+
+
+.photo{
+  width: 50%;
+  height: 70%;
+  margin-top: 250px;
+  margin-bottom: 50px;
+  background-image: url("image/mach.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.etude{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50em;
+  width: 100%;
+
+}
+
+.exterieur{
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 75em;
+  margin-left: 8em;
+  width: 700px;
+  height: 1000px;
+  border: 1px solid grey;
+  background-color: white;
+
+}
+
+
+.interieur{
+
+  width: 600px;
+  height: 850px;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 25px;
+  border: 2px solid grey;
+}
+
+.exterieur :hover{
+  background-color: #000;
+  color: white;
+}
+/*******************************************************
+           COMPETENCES
+********************************************************/
+
+.competences{
+  width: 100%;
+  height: 150em;
+  background-color: #EEFBFC;
+}
+
+
+
+.titre{
+  width: 400px;
+  height: 100px;
+  margin-bottom: 50px;
+  color: black;
+  text-align: center;
+  border: 1px solid grey;
+  text-align: center;
+  padding-top: 30px;
+  margin-left: 400px;
+  font-family: police1;
+  font-size: 20px;
+}
+
+
+
+/******************************************************************
+                   skillbar
+****************************************************************/
+
+
+
+
+
+
+
+
+
+
+/************************************************************
+                J'AIME
+************************************************************/
+.jaime{
+  width: 100%;
+  height: 60em;
+  background-color: #EEFBFC;
+
+}
+
+
+.titre{
+  width: 400px;
+  height: 100px;
+  margin-bottom: 50px;
+  color: black;
+  text-align: center;
+  border: 1px solid grey;
+  margin-bottom: 50px;
+  text-align: center;
+  padding-top: 30px;
+  margin-left: 400px;
+  font-family: police1;
+  font-size: 20px;
+
+}
+.bloc{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+margin-top: 150px;
+margin-top: 200px;
+}
+
+/* on fixe la largeur du bloc (optionnel)
+   et on le définit comme référent */
+blockquote {
+    position: relative;
+    width: 300px;
+    padding: 10px;
+}
+/* on ajoute des effets graphiques
+   sur nos futures feuilles */
+blockquote,
+blockquote:after,
+blockquote:before {
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+/* on utilise les pseudo éléments pour ajouter des feuilles */
+blockquote:after,
+blockquote:before {
+    position: absolute;
+    top: 0; right:3px; bottom:0; left:-3px;
+    content: "";
+    z-index: -10;
+    /* définit le centre de transformation */
+    transform-origin: 100% 0;
+}
+blockquote:after {
+    transform: rotate(-0.6deg);
+}
+blockquote:before {
+    transform: rotate(-1.2deg);
+    right: 5px; left: -5px;
+}
+
+/*********************************************************
+                          QUALITEES titre
+***********************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************************************
+                        CONTACT
+***********************************************************/
+
+.box
+{
+    display: inline-block;
+    justify-content: center;
+    margin-top: 250px;
+    height:250px;
+    overflow: hidden;
+    width:20%;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    transition: width 1s;
+}
+
+
+.box.curieuse { background-color: #685E43}
+.box.ponctuelle { background-color: #174459;}
+.box.dynamique { background-color: #5A69A6;}
+.box.creative { background-color: #c44e45;}
+.box.sourire { background-color: #78A12C;}
+
+.box a
+{
+    color:#FFF;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    height:100%;
+    display:block;
+    padding-top: 20px;
+}
+.box span
+{
+    display:block;
+    position:relative;
+    top:100%;
+    text-align: center;
+    -webkit-transition: top 1s;
+    -moz-transition: top 1s;
+    transition: top 1s;
+}
+
+.nav:hover .box { width:10%; }
+.nav .box:hover { width: 60%; }
+.box:hover span{ top:25%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************************************************
+                         PROJET
+***************************************************************/
+
+
+
+/**************************************************************
+
+***************************************************************/
+.bloc2{
+  display: inline-block;
+}
+
+.passion{
+  width: 500px;
+  height: 300px;
+  font-style: italic;
+  font-size: 25px;
+  text-align: justify;
+  border-right: 3px solid #303030;
+  padding-left: 25px;
+  padding-top: 100px;
+ background-color: blue;
+}
