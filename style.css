@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "The_Black_Box";
+    src: url("fonts/The_Black_Box-FFP.otf");
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -15,32 +21,40 @@ main {
     align-items: center;
     width: 100%;
     height: 60em;
-    background-image: url("image/fleur.jpg");
+    background-image: url("image/vintage.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: police2;
+
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40em;
+    height: 30em;
+    margin-top: 100px;
 }
 
-a{
-    width: 3em;
-    height: 1em;
-    border-radius: 8px;
-    background-image: radial-gradient(grey, black);
-    color: white;
-    font-family: police1;
-    font-size: 3em;
-    text-align: center;
-    text-decoration: none;
+.btn img{
+  width: 13em;
+  height: 4em;
+
+
 }
 
-marquee {
-    border-radius: 20px;
-    font-size: 100px;
-    font-family: police1;
-    color: white;
+.mp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
-@font-face {
-    font-family: police1;
-    src: url("font/AdventuresontheMountains.ttf");
+.back{
+  width: 70%;
+  height: 200px;
+  background-image: url("image/bannierebleu.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 150px;
 }

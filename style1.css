@@ -1,10 +1,7 @@
 @font-face {
-    font-family: "police1";
-    src: url("fonts/AdventuresontheMountains.ttf");
+  font-family: "policeCANDLE";
+    src: url("fonts/candlescript/police1.otf");
 }
-
-
-
 
 * {
   margin: 0;
@@ -20,6 +17,9 @@ margin: 0;
 padding: 0;
 background-color: white;
 }
+ul{
+  list-style: none;
+}
 
 /*************************************************
           section               nav bar
@@ -33,15 +33,19 @@ border-left:  80px solid white;
 .accueil {
   width: 100%;
   height: 60em;
-  text-align: center;
-  background-image: url("image/image2.jpg");
+  background-image: url("./image/appareil.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
  nav{
-   margin: 20px auto;
+   display: flex;
+   position: fixed;
+   z-index: 50;
+   margin: auto;
    width: 90%;
    max-width: 1000px;
+   left: 0%;
+   right: 0%
 
  }
 
@@ -64,26 +68,6 @@ nav > ul li {
 /***************************************************
             Sous-menu nav
 *****************************************************/
-nav > ul > li > ul{
-  display: none;
-}
-
-
-nav > ul > li > ul {
-  display: block;
-  position: absolute;
-  background: #000;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  height: 0%;
-  -webkit-transition: all .3s ease;
-  moz-transition: all .3s ease;
-  ms-transition: all .3s ease;
-  o-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
 li{
   text-align: center;
 
@@ -109,11 +93,6 @@ nav > ul li a {
   transition: all .3s ease;
 }
 
-nav > ul > li > ul > li a:hover {
-  background: #5da5a2;
-
-}
-
 nav > ul > li > a span {
   background: #c44e45;
   display: block;
@@ -131,7 +110,6 @@ nav > ul > li > a span {
 
 nav > ul > li > a span .icon {
   display: block;
-  line-height: 60px;
   justify-content: center;
   align-items: center;
   line-height: 60px;
@@ -150,7 +128,6 @@ nav > ul > li > a:hover > span {
   justify-content: center;
   align-items: center;
 }
-
 
 /***************************************************
                couleurs nav
@@ -192,9 +169,6 @@ nav ul li a .septieme {
 
 }
 
-
-
-
 /**************************************************
            portrait coordonnées
 **************************************************/
@@ -204,7 +178,7 @@ nav ul li a .septieme {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+
 }
 .conteneur{
   display: flex;
@@ -213,6 +187,7 @@ nav ul li a .septieme {
   align-items: center;
   width: 900px;
   height: 500px;
+  margin-top: 250px;
   background-color: rgba(0 , 0 , 0, 0.7);
   color: white;
   border-radius: 30px;
@@ -221,238 +196,113 @@ nav ul li a .septieme {
 .presentation{
   width:  300px;
   height: 300px;
+  text-align: center;
   border-radius: 30px;
   border: 5px solid white;
-  font-size: 23px;
+  font-size: 22px;
   padding-top: 30px;
 }
 .portrait{
   width: 300px;
   height: 300px;
   border-radius: 30px;
-  background-image: url("image/moi.jpg");
+  background-image: url("./image/moi.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border: 5px solid white;
 }
-
-
-
-
-
 
 /***************************************************
            nav vertical reseau sociaux
 *****************************************************/
 
 .social{
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-   position: fixed;
-   background-color: rgba(0 , 0 , 0, 0.7);
-   left: 0;
-   top: 220px;
-   z-index: 2000;
+  position: fixed;
+  left: 0;
+  top: 16em;
+}
+.social li{
+  width: 90%;
 }
 
-.social ul {
- list-style:none;
-}
-
-.social li:nth-child(1){
-  background-color: blue;
-}
-.social li:nth-child(2){
-  background-color: blue;
-}
-.social li:nth-child(3){
-  background-color: blue;
-}
-.social li:nth-child(4){
-  background-color: blue;
-}
-.social li:nth-child(5){
-  background-color: blue;
-}
-
-.social ul li a {
+.social ul li a{
+  padding: 0.5em;
   display: inline-block;
   color: #fff;
-
-  padding: 10px 15px;
+  background-color: #000;
   text-decoration: none;
-  -webkit-transition:all 500ms ease;
-  -o-transition:all 500ms ease;
-  transition:all 500ms ease;
+  -webkit-transition: 500ms ease;
+  -o-transition: 500ms ease;
+  transition: 500ms ease;
 }
-
-.social ul li a i{
-  background-color: red:
+.social i{
+  padding: 0.2em;
+}
+.social .in{
+  background-color: #0077B5;
+  width: 100%;
+}
+.social .facebook{
+  background-color: #3B5998;
+  width: 100%;
+}
+.social .twitter{
+  background-color: #2AA9DF;
+  width: 100%;
+}
+.social .google{
+  background-color: #DC4A38;
+  width: 100%;
+}
+.social .cv{
+  background-color: #78A12C;
+  width: 100%;
+}
+/* HOVER */
+.social .in:hover, .cv:hover, .facebook:hover,
+.twitter:hover, .google:hover{
+  background-color: #000;
+  width: 150%;
 }
 /*************************************************
             EXPERIENCES
 ***************************************************/
-.titre{
-width: 200px;
-height: 100px;
-color: black;
-text-align: center;
-border: 1px solid grey;
-margin-top: 150px;
-padding-top: 35px;
-margin-left: 400em;
-font-family: police1;
-font-size: 15px;
-margin-bottom: 150px;
-
+.titrehaut{
+  width: 400px;
+  height: 300px;
+  background-image: url("./image/image1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 
 .experiences{
   width: 100%;
-  height: 300em;
+  height: 150em;
   margin-top: 3em;
   margin-bottom: 3em;
-  background-color: #EEFBFC;
-
-
-}
-
-.conteneurcentre{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 2%;
-  width: 70%;
-  height: auto;
-  background: url("image/pont.jpg");
+  background: url("./image/cartep.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
 }
-
 .pro{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-top: 15em;
   width: 100%;
-  margin: 30px auto;
-}
-.pro2{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  width: 100%;
-  margin: 30px auto;
-}
-/******************************************
-          carte pro
-*******************************************/
-.panel{
-  width: 46%;
   height: auto;
-  font-family: "police1";
-  font-size: 50px;
-  padding: 30px;
 }
-.informatique{
+.panel{
+  width: 500px;
+  height: 420px;
+  border: 15px solid white;
+  font-family:"policeCANDLE";
+  font-size: 30px;
   text-align: center;
-  border: 1px solid grey;
-  background-color: white;
+  padding-top: 15px;
+  background-image: url("./image/papyrus.png");
 }
-
-.informatique1{
-  padding-top: 100px;
-
-  border: 2px solid grey;
-}
-
-.secretariat{
-
-  border: 1px solid grey;
-  background-color: white;
-}
-
-.secretariat1{
-  text-align: center;
-
-  border: 2px solid grey;
-}
-.baby{
-
-  border: 1px solid grey;
-  background-color: white;
-}
-
-.baby1  {
-  text-align: center;
-
-  border: 2px solid grey;
-
-}
-
-.livre{
-
-  border: 1px solid grey;
-  background-color: white;
-
-}
-
-.livre1{
-  text-align: center;
-
-  border: 2px solid grey;
-}
-
-.vente{
-  justify-content: flex-start;
-  align-self: flex-start;
-  border: 1px solid grey;
-  background-color: white;
-
-}
-
-.vente1{
-  text-align: center;
-
-  border: 2px solid grey;
-}
-
-
-/********************************************************************
-                          HOVER
-***********************************************************************/
-.informatique :hover{
-   background-color: #000;
-   color: white;
-
-}
-
-
-.vente :hover{
-   background-color: #000;
-   color: white;
-
-}
-
-.secretariat :hover{
-   background-color: #000;
-   color: white;
-
-}
-
-
-.baby :hover{
-   background-color:  #000;
-   color: white;
-
-}
-
-
-
 
 /***************************************************
              FORMATION
@@ -460,301 +310,291 @@ margin-bottom: 150px;
 
 .formation{
   width: 100%;
-  height: 120em;
-  background-color: #EEFBFC;
-
-}
-
-
-
-.titre{
-  width: 400px;
-  height: 100px;
-  margin-bottom: 50px;
-  color: black;
-  text-align: center;
-  border: 1px solid grey;
-  text-align: center;
-  padding-top: 30px;
-  margin-left: 400px;
- font-family: police1;
- font-size: 20px;
-}
-
-
-
-.photo{
-  width: 50%;
-  height: 70%;
-  margin-top: 250px;
-  margin-bottom: 50px;
-  background-image: url("image/mach.jpg");
+  height: 70em;
+  background-image: url("./image/retro.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
 
+.titreformation{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.polar{
+  width: 250px;
+  height: 290px;
+  font-family:"policeCANDLE";
+  font-size: 50px;
+  text-align: center;
+  margin-top: 150px;
+  border: 15px solid white;
+  border-bottom: 50px solid white;
+  background-color: black;
+  color: white;
 }
 
 .etude{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50em;
-  width: 100%;
-
+  justify-content: space-around;
+  margin-top: 200px;
 }
-
-.exterieur{
-  position: absolute;
-  z-index: 20;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 75em;
-  margin-left: 8em;
-  width: 700px;
-  height: 1000px;
-  border: 1px solid grey;
-  background-color: white;
-
-}
-
 
 .interieur{
-
-  width: 600px;
-  height: 850px;
+  width: 250px;
+  height: 290px;
+  margin-top: 30px;
+  font-family:"policeCANDLE";
+  font-size: 26px;
   text-align: center;
-  padding-top: 50px;
-  font-size: 25px;
-  border: 2px solid grey;
-}
-
-.exterieur :hover{
-  background-color: #000;
+  border: 10px solid white;
+  border-bottom: 40px solid white;
+  background-color: black;
   color: white;
 }
+
+.span{
+  width: 150px;
+  height: 40px;
+  border: 1px solid black;
+  font-family:"policeCANDLE";
+  font-size: 20px;
+
+}
+
 /*******************************************************
            COMPETENCES
 ********************************************************/
 
 .competences{
   width: 100%;
-  height: 150em;
-  background-color: #EEFBFC;
+  height: 40em;
+  background-color: #E6E2AF;
+
 }
 
+.entoure{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 200px;
 
-
-.titre{
-  width: 400px;
-  height: 100px;
-  margin-bottom: 50px;
-  color: black;
-  text-align: center;
-  border: 1px solid grey;
-  text-align: center;
-  padding-top: 30px;
-  margin-left: 400px;
-  font-family: police1;
-  font-size: 20px;
 }
 
+.bandetitre{
+  width: 30%;
+  height: 50px;
+}
 
-
+}
+.competences{
+  position: static;
+  z-index: 100;
+}
 /******************************************************************
                    skillbar
 ****************************************************************/
+.competences{
+  width: 100%;
+  height: 60em;
+  background-color: #E6E2AF;
+
+}
+
+.compt{
+  width:960px;
+  margin-top: 300px;
+  font-family: 'Ubuntu', sans-serif;
+}
 
 
+.skillbar {
+  position:relative;
+  display:block;
+  margin-bottom: 15px;
+  width:100%;
+  background:#eee;
+  height:35px;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  -webkit-transition:0.4s linear;
+  -moz-transition:0.4s linear;
+  -ms-transition:0.4s linear;
+  -o-transition:0.4s linear;
+  transition:0.4s linear;
+  -webkit-transition-property:width, background-color;
+  -moz-transition-property:width, background-color;
+  -ms-transition-property:width, background-color;
+  -o-transition-property:width, background-color;
+  transition-property:width, background-color;
+}
 
+.skillbar-title {
+  position:absolute;
+  top:0;
+  left:0;
+  width:110px;
+  font-weight:bold;
+  font-size: 15px;
+  color:#ffffff;
+  background:#6adcfa;
+  -webkit-border-top-left-radius:3px;
+  -webkit-border-bottom-left-radius:4px;
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
 
+.skillbar-title span {
+  display:block;
+  background:rgba(0, 0, 0, 0.1);
+  padding:0 20px;
+  height:35px;
+  line-height:35px;
+  -webkit-border-top-left-radius:3px;
+  -webkit-border-bottom-left-radius:3px;
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
 
+.skillbar-bar {
+  height:35px;
+  width:0px;
+  background:#6adcfa;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+}
 
+.skill-bar-percent {
+  position:absolute;
+  right:10px;
+  top:0;
+  font-size:11px;
+  height:35px;
+  line-height:35px;
+  color:#ffffff;
+}
+.skillbar2{
+  height: 70px;
+  line-height: 70px;
+  font-size: 40px;
+  text-align: center;
+}
+.skillbar2 p{
+  margin-left: 120px;
+  color: #fff;
+}
 
+/**************************************************************
+                         PROJET
+***************************************************************/
+.projet{
+  width: 100%;
+  height: 60em;
+  background-image: url("./image/papyrus.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.titre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family:"policeCANDLE";
+}
+.titrepro{
+  margin-top: 150px;
+  font-family:"policeCANDLE";
+  font-size: 30px;
 
+}
+.ecriture{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+  text-align: justify;
+  font-family:"policeCANDLE";
+  font-size: 30px;
 
+}
+
+.signature{
+  margin-left: 400px;
+}
 /************************************************************
                 J'AIME
 ************************************************************/
 .jaime{
   width: 100%;
-  height: 60em;
-  background-color: #EEFBFC;
+  height: 80em;
+  background-color: #E6E2AF;
 
 }
-
+.titrejaime{
+  font-family:"policeCANDLE";
+  font-size: 30px;
+  margin-top: 150px
+}
+.h1{
+  width: 100%;
+  height: 150px;
+  font-family:"policeCANDLE";
+  margin-top: 100px;
+}
 
 .titre{
-  width: 400px;
-  height: 100px;
-  margin-bottom: 50px;
-  color: black;
-  text-align: center;
-  border: 1px solid grey;
-  margin-bottom: 50px;
-  text-align: center;
-  padding-top: 30px;
-  margin-left: 400px;
-  font-family: police1;
-  font-size: 20px;
-
+  display: flex;
+  justify-content: center;
 }
-.bloc{
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
-margin-top: 150px;
-margin-top: 200px;
-}
-
-/* on fixe la largeur du bloc (optionnel)
-   et on le définit comme référent */
-blockquote {
-    position: relative;
-    width: 300px;
-    padding: 10px;
-}
-/* on ajoute des effets graphiques
-   sur nos futures feuilles */
-blockquote,
-blockquote:after,
-blockquote:before {
-    background: #fff;
-    box-shadow: 0 0 4px rgba(0,0,0,0.4);
-}
-
-/* on utilise les pseudo éléments pour ajouter des feuilles */
-blockquote:after,
-blockquote:before {
-    position: absolute;
-    top: 0; right:3px; bottom:0; left:-3px;
-    content: "";
-    z-index: -10;
-    /* définit le centre de transformation */
-    transform-origin: 100% 0;
-}
-blockquote:after {
-    transform: rotate(-0.6deg);
-}
-blockquote:before {
-    transform: rotate(-1.2deg);
-    right: 5px; left: -5px;
-}
-
-/*********************************************************
-                          QUALITEES titre
-***********************************************************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*********************************************************
                         CONTACT
 ***********************************************************/
-
-.box
-{
-    display: inline-block;
-    justify-content: center;
-    margin-top: 250px;
-    height:250px;
-    overflow: hidden;
-    width:20%;
-    -webkit-transition: width 1s;
-    -moz-transition: width 1s;
-    transition: width 1s;
+.contact{
+  width: 100%;
+  height: 100em;
+  background-image: url("./image/enveloppe1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-
-.box.curieuse { background-color: #685E43}
-.box.ponctuelle { background-color: #174459;}
-.box.dynamique { background-color: #5A69A6;}
-.box.creative { background-color: #c44e45;}
-.box.sourire { background-color: #78A12C;}
-
-.box a
-{
-    color:#FFF;
-    text-decoration: none;
-    text-align: center;
-    vertical-align: middle;
-    height:100%;
-    display:block;
-    padding-top: 20px;
+.entier{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 70em;
+  background-size: contain;
 }
-.box span
-{
-    display:block;
-    position:relative;
-    top:100%;
-    text-align: center;
-    -webkit-transition: top 1s;
-    -moz-transition: top 1s;
-    transition: top 1s;
-}
-
-.nav:hover .box { width:10%; }
-.nav .box:hover { width: 60%; }
-.box:hover span{ top:25%; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**************************************************************
-                         PROJET
-***************************************************************/
-
-
-
-/**************************************************************
-
-***************************************************************/
-.bloc2{
-  display: inline-block;
-}
-
-.passion{
+.titrecontact{
+  display: flex;
+  justify-content: center;
   width: 500px;
-  height: 300px;
-  font-style: italic;
-  font-size: 25px;
-  text-align: justify;
-  border-right: 3px solid #303030;
-  padding-left: 25px;
-  padding-top: 100px;
- background-color: blue;
+  height: 200px;
+  font-family:"policeCANDLE";
+  font-size: 30px;
+  background-image: url("./image/enveloppe.jpg");
+  line-height: 200px;
+  margin-right: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.fond{
+  width: 400px;
+  height: 1500px;
+  margin-left: 300px;
+  font-family:"policeCANDLE";
+  font-size: 30px;
+  transform: rotate(-9deg);
 }
